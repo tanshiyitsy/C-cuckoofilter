@@ -7,8 +7,7 @@
 #include <vector>
 
 using cuckoofilter::CuckooFilter;
-
-int main(int argc, char **argv) {
+void test(){
   size_t total_items = 1000000;
 
   // Create a cuckoo filter where each item is of type size_t and
@@ -47,6 +46,10 @@ int main(int argc, char **argv) {
   // Output the measured false positive rate
   std::cout << "false positive rate is "
             << 100.0 * false_queries / total_queries << "%\n";
+
+}
+int main(int argc, char **argv) {
+  test();
 
   return 0;
 }
