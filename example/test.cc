@@ -25,8 +25,8 @@ void test(){
   cout<<"input finger_size"<<endl;
   int finger_size;
   cin>>finger_size;
-//   CuckooFilter<size_t, 12> filter(total_items);
-  CuckooFilter<size_t, (const)finger_size> filter(total_items);
+  CuckooFilter<size_t, 12> filter(total_items);
+  //CuckooFilter<size_t, finger_size> filter(total_items);
 
   // Insert items to this cuckoo filter
   size_t num_inserted = 0;
