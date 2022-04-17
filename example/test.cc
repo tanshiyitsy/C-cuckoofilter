@@ -59,7 +59,8 @@ void expriment(){
   int index = 0, numAll = 100000;
   string log_entry;
   while(index++ < numAll && getline(logFile, log_entry)){
-          cout<<log_entry<<endl;
+        cout<<index<<endl;
+        cout<<log_entry<<endl;
   }
   logFile.close();
 }
