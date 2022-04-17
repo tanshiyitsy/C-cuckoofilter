@@ -58,7 +58,7 @@ void expriment(){
   logFile.open(file_path, ios::in | ios::out);
   int index = 0, numAll = 100000;
   string log_entry;
-  while(index < numAll && getline(fstream, log_entry)){
+  while(index++ < numAll && getline(logFile, log_entry)){
           cout<<log_entry<<endl;
   }
   logFile.close();
