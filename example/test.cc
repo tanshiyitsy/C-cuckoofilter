@@ -54,7 +54,7 @@ void test(){
 }
 void expriment(){
   fstream logFile;
-  char *file_path = "/home/hduser/testFiles/";
+  char *file_path = "/home/hduser/testFiles/allLog.txt";
   logFile.open(file_path, ios::in | ios::out);
   int index = 0, numAll = 100000;
   string log_entry;
