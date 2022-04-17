@@ -64,14 +64,6 @@ void expriment(){
   int index = 0, numAll = 10;
   string log_entry;
  
-
-  // Check if previously inserted items are in the filter, expected
-  // true for all items
-  for (size_t i = 0; i < num_inserted; i++) {
-    assert(filter.Contain(i) == cuckoofilter::Ok);
-  }
-
- 
   while(index++ < numAll && getline(logFile, log_entry)){
         //cout<<index<<endl;
         //cout<<log_entry<<endl;
