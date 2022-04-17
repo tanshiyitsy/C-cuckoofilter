@@ -6,6 +6,9 @@
 #include <iostream>
 #include <vector>
 
+#include "string"
+#include "fstream"
+
 using cuckoofilter::CuckooFilter;
 void test(){
   size_t total_items = 1000000;
@@ -48,8 +51,19 @@ void test(){
             << 100.0 * false_queries / total_queries << "%\n";
 
 }
+void expriment(){
+  fstream logFile;
+  char *file_path = "/home/hduser/testFiles/";
+  logFile.open(file_path, ios::in | ios::out);
+  int index = 0, numAll = 100000;
+  string log_entry;
+  while(index < numAll && getline(fstream, log_entry)){
+          cout<<log_entry<<endl;
+  }
+  logFile.close();
+}
 int main(int argc, char **argv) {
-  test();
-
+  //test();
+  expriment();
   return 0;
 }
