@@ -12,7 +12,7 @@
 using cuckoofilter::CuckooFilter;
 using namespace std;
 void test(){
-  size_t total_items = 1000000;
+  size_t total_items = 100;
 
   // Create a cuckoo filter where each item is of type size_t and
   // use 12 bits for each item:
