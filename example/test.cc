@@ -10,6 +10,7 @@
 #include "fstream"
 
 using cuckoofilter::CuckooFilter;
+using namespace std;
 void test(){
   size_t total_items = 1000000;
 
