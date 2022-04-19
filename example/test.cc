@@ -12,7 +12,7 @@
 using cuckoofilter::CuckooFilter;
 using namespace std;
 void test(){
-  size_t total_items = 40000;
+  size_t total_items = 10000;
   cout<<"input capacity"<<endl;
   cin>>total_items;
   // Create a cuckoo filter where each item is of type size_t and
