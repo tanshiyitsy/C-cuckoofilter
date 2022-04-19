@@ -94,6 +94,7 @@ class CuckooFilter {
       num_buckets <<= 1;
     }
     victim_.used = false;
+    std::cout<<"num_buckets="<<num_buckets<<std::endl;
     table_ = new TableType<bits_per_item>(num_buckets);
   }
 
