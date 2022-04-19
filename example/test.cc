@@ -11,10 +11,10 @@
 
 using cuckoofilter::CuckooFilter;
 using namespace std;
-void test(){
-  size_t total_items = 10000;
-  cout<<"input capacity"<<endl;
-  cin>>total_items;
+void test(size_t total_items = 1000;){
+  //size_t total_items = 1000;
+  //cout<<"input capacity"<<endl;
+  //cin>>total_items;
   // Create a cuckoo filter where each item is of type size_t and
   // use 12 bits for each item:
   //    CuckooFilter<size_t, 12> filter(total_items);
@@ -51,8 +51,8 @@ void test(){
   }
 
   // Output the measured false positive rate
-  std::cout << "false positive rate is "
-            << 100.0 * false_queries / total_queries << "%\n";
+//   std::cout << "false positive rate is "
+//             << 100.0 * false_queries / total_queries << "%\n";
 
 }
 void expriment(){
@@ -71,7 +71,12 @@ void expriment(){
   logFile.close();
 }
 int main(int argc, char **argv) {
-  test();
+  size_t total_items = 1000;
+  while(total_items<=20000){
+    test(total_items);
+    total_items += 1000;
+  }
+  //test();
   //expriment();
   return 0;
 }
