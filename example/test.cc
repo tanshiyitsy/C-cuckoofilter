@@ -11,7 +11,7 @@
 
 using cuckoofilter::CuckooFilter;
 using namespace std;
-void test(size_t total_items = 1000;){
+void test(size_t total_items = 1000){
   //size_t total_items = 1000;
   //cout<<"input capacity"<<endl;
   //cin>>total_items;
