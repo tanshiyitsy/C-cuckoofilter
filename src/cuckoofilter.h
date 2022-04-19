@@ -88,6 +88,7 @@ class CuckooFilter {
  public:
   explicit CuckooFilter(const size_t max_num_keys) : num_items_(0), victim_(), hasher_() {
     size_t assoc = 4;
+    std::cout<<"max_num_keys="<<max_num_keys<<std::endl;
     size_t num_buckets = upperpower2(std::max<uint64_t>(1, max_num_keys / assoc));
     double frac = (double)max_num_keys / num_buckets / assoc;
     if (frac > 0.96) {
@@ -95,6 +96,7 @@ class CuckooFilter {
     }
     victim_.used = false;
     std::cout<<"num_buckets="<<num_buckets<<std::endl;
+    std::cout<<"bits_per_item="<<bits_per_item<<std::endl;
     table_ = new TableType<bits_per_item>(num_buckets);
   }
 
