@@ -12,8 +12,8 @@
 using cuckoofilter::CuckooFilter;
 using namespace std;
 void test(){
-  size_t total_items = 1000;
-  cout<<"input total_item"<<endl;
+  size_t total_items = 40000;
+  cout<<"input capacity"<<endl;
   cin>>total_items;
   // Create a cuckoo filter where each item is of type size_t and
   // use 12 bits for each item:
@@ -22,9 +22,7 @@ void test(){
   // PackedTable, accepting keys of size_t type and making 13 bits
   // for each key:
   //   CuckooFilter<size_t, 13, cuckoofilter::PackedTable> filter(total_items);
-  //cout<<"input finger_size"<<endl;
-  //int finger_size;
-  //cin>>finger_size;
+
   CuckooFilter<size_t, 12> filter(total_items);
   //CuckooFilter<size_t, finger_size> filter(total_items);
 
